@@ -1,1 +1,36 @@
+spring:
+  datasource:
+    url: ENC(Qkmg/U+s/XMjjS5Z63ptuYoN2UJaZ/MySlCteV/6T1T8ZIgcpe9YBBGpin0ecU8f3V2yVpft4D1wnhAc1V4uUhC6R04hXz+m3KY4PaW1nTofrdtYqdau3KMNtGTvhGRzciGIGxcZ/Yk=)
+    username: ENC(XivEBb2EAfeySlvbup+sAw==)
+    password: ENC(U2p0AgJ82y966KtuNSoQTg==)
 
+  jpa:
+    hibernate:
+      ddl-auto: create
+      jdbc:
+        time_zone: Asia/Seoul
+
+server:
+  error:
+    whitelabel:
+      enabled: false
+
+logging:
+  level:
+    org:
+      springframework:
+        transaction:
+          interceptor: TRACE
+        jdbc:
+          datasource:
+            DataSourceTransactionManager: DEBUG
+        orm:
+          jpa:
+            JpaTransactionManager: DEBUG
+
+      hibernate:
+        #JPA log
+        resource:
+          transaction: DEBUG
+        #JPA SQL
+        SQL: DEBUG
